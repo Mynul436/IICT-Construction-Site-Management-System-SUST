@@ -1,0 +1,29 @@
+use IICT_CONSTRUCTION_SITE_MANAGEMENT_SYSTEM;
+
+
+CREATE TABLE Daily_Expense_Table(
+ID INT IDENTITY(1,1),
+MANAGER_ID INT FOREIGN KEY REFERENCES Manager_Table(MANAGER_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE,
+[DAY] DATE,
+AMOUNT FLOAT,
+[DESCRIPTION] VARCHAR(200),
+);
+INSERT INTO Daily_Expense_Table VALUES(30002,'2022-04-01',70,'Tea,Biscuit')
+INSERT INTO Daily_Expense_Table VALUES(30002,'2022-04-01',50,'Medical')
+INSERT INTO Daily_Expense_Table VALUES(30002,'2022-04-04',100,'Dori')
+INSERT INTO Daily_Expense_Table VALUES(30002,'2022-04-05',90,'Teaster')
+INSERT INTO Daily_Expense_Table VALUES(30002,'2022-04-06',30,'Van vara')
+INSERT INTO Daily_Expense_Table VALUES(30002,'2022-04-07',100,'Tea')
+INSERT INTO Daily_Expense_Table VALUES(30002,'2022-04-07',200,'Guest')
+INSERT INTO Daily_Expense_Table VALUES(30002,'2022-04-10',150,'Tea')
+INSERT INTO Daily_Expense_Table VALUES(30002,'2022-04-11',265,'Medicine')
+
+drop TABLE Daily_Expense_Table;
+select *from Khoraki_Table;
+
+
+SELECT * FROM Provider_Table;
+SELECT *FROM Daily_Expense_Table;
+
